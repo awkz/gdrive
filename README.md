@@ -16,6 +16,14 @@ None, binaries are statically linked.
 If you want to compile from source you need the [go toolchain](http://golang.org/doc/install).
 Version 1.5 or higher.
 
+```
+curl -O https://storage.googleapis.com/golang/go1.11.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.11.1.linux-amd64.tar.gz
+mkdir -p ~/go; echo "export GOPATH=$HOME/go" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc
+```
+
 ## Installation
 ### With [Homebrew](http://brew.sh) on Mac
 ```
@@ -67,7 +75,7 @@ You will be prompted for a new verification code if the folder does not exist.
 
 ## Compile from source
 ```bash
-go get github.com/prasmussen/gdrive
+go get github.com/awkz/gdrive
 ```
 The gdrive binary should now be available at `$GOPATH/bin/gdrive`
 
